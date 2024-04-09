@@ -1,28 +1,111 @@
-/****** General ***********/
+/****** general ***********/
 * {
     font-family: 'Raleway', sans-serif;
 }
 
 :root {
     --main-color: pink;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+    --main-bg-color: rgb(242, 242, 242);
+    --filter-bg-color: rgb(222, 235, 255);
 }
 
 .fa-solid {
     color: var(--main-color);
 }
 
+
+/********* body *********/
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
 }
 
+
+/********* header *********/
+
+
+header {
+    width: 100%;
+    max-width: 1440px;
+    height: 80px;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+}
+
+
+
+
+.logo {
+    margin: 30px 50px 30px 50px;
+}
+
+.logo img {
+    width: 61.09px;
+}
+
+
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    padding-left: 50px;
+    gap: 68px;
+}
+
+.menu {
+    display: flex;
+    align-self: flex-start;
+
+}
+
+.menu li {
+    list-style-type: none;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 50px 0px 50px;
+}
+
+.menu a {
+    padding-top: 14px;
+}
+
+.menu a:hover {
+    padding-top: 14px;
+    border-top: 1px solid rgb(0, 101, 252);
+    color: rgb(0, 101, 252);
+}
+
+
+/********* main *********/
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+    max-width: 1440px;
+}
+
+
 .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    
 }
 
 a {
@@ -30,13 +113,118 @@ a {
     text-decoration: none;
 }
 
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {font-size: 16px;}
+
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+/********* search-form *********/
+
+.search-form {display: flex;
+flex-direction: column;
+gap: 35px;}
+
+
+
+.header-search h5 {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+
+#position-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 15px 0px 0px 15px;
+    width: 50px;
+    height: 49px;
+}
+
+
+#hebergement {
+    display: flex;
+    background-color: white;
+    border: solid rgba(242, 242, 242, 1) 1px;
+    padding: 0px;
+    width: 195px;
+    height: 47px;
+    color: black;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.search-bar button {
+    display: flex;
+    height: 49px;
+    align-items: center;
+    gap: 24px;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(242, 242, 242, 1);
+    background-color: rgb(0, 101, 252);
+    border: solid rgb(0, 101, 252) 1px;
+    border-radius: 0px 15px 15px 0px;
+    padding: 15px 16px;
+}
+
+.search-bar button:hover
+{background-color: rgba(0, 101, 252,0.5);}
+
+#button-mobile {display:none;}
+
+/********* filters *********/
+
+.filters {display: flex;
+    gap:15px;
+}
+
+.filters-box {display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid;
+border-color: rgb(217, 217, 217);
+border-radius: 50px ;
+gap:10px;
+padding: 4px 19px 4px 19px;
+height: 42px;
+}
+
+.filters-box:hover {background-color: rgb(222, 235, 255);}
+
+.info {display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:10px;
+    }
+
+/********* cards *********/
+
 .section-title {
     margin: 0;
     font-size: 22px;
 }
 
 .card {
-    background-color: grey;
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -46,9 +234,7 @@ a {
     object-fit: cover;
 }
 
-.card-title {
-    font-size: 16px;
-}
+
 
 .euro {
     font-weight: 700;
@@ -58,30 +244,43 @@ a {
     color: var(--main-bg-color)
 }
 
-/****** Hebergements And Populaires ***********/
+/****** hebergements and populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    padding: 0 50px;
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
+    padding: 50px;
     box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
+/****** hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-/****** Populaires ***********/
+.hebergements-cards
+{
+display: grid;
+grid-template-columns: 31% 31% 31%;
+justify-content: center;
+gap: 30px;
+
+}
+
+/****** populaires ***********/
 .populaires {
     width: 32%;
 }
 
-.populaires-title {
+.main-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,14 +320,47 @@ a {
     margin-bottom: 5px;
 }
 
+/********* activites *********/
+.activites {padding: 0 50px;}
 
+.activites-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
+/********* footer *********/
+
+footer {
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    max-width: 1440px;
+    margin: 0px 50px 0px 50px;
+}
+
+.footer-category {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 30px;
+}
+
+.footer-category ul {  list-style-type: none;
+                    
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    header {
+        width: 100%;
+    }
+
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -159,9 +391,18 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    footer {
+        width: 100%;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+
+#button-mobile { display:inline;}
+.search-bar button{display: none;}
+
     /* ... */
 }
